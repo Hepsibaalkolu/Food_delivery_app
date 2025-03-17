@@ -1,0 +1,12 @@
+{
+  "name": "food_delivery_app",
+  "private": true,
+  "workspaces": ["client", "server"],
+  "scripts": {
+    "install-all": "npm install --prefix client && npm install --prefix server",
+    "start": "concurrently \"npm start --prefix client\" \"npm start --prefix server\""
+  },
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
