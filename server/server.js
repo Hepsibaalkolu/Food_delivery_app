@@ -5,9 +5,14 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 
-app.use(cors());
+//https://food-delivery-app-client-akp4.onrender.com
+
+app.use(cors({
+    origin: "https://food-delivery-app-client-akp4.onrender.com",
+    credentials: true
+}));
 app.use(express.json());
 
 mongoose
